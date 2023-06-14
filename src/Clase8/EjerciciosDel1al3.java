@@ -23,7 +23,7 @@ public class EjerciciosDel1al3 {
         System.out.println(password);
     }
     public static int randomNumber(int min, int max){
-        int number = (int) Math.round(Math.random() * (max - min + 1) + min);
+        int number = (int) Math.round(Math.random() * (max - min) + min);
         return number;
     }
     public static char randomCharacter(){
