@@ -3,19 +3,17 @@ package Clase12.Ejercicio4;
 public class Student {
 private String name;
 private String lastName;
-private Double[] grades;
+private double[] grades;
 
-    public Student(String name, String lastName, Double[] grades) {
+    public Student(){
+
+    }
+    public Student(String name, String lastName, double[] grades) {
         this.name = name;
         this.lastName = lastName;
         this.grades = grades;
     }
-
-    public Student() {
-        grades = new Double[7];
-    }
-
-    public String getName() {
+       public String getName() {
         return name;
     }
 
@@ -31,11 +29,11 @@ private Double[] grades;
         this.lastName = lastName;
     }
 
-    public Double[] getGrades() {
+    public double[] getGrades() {
         return grades;
     }
 
-    public void setGrades(Double[] grades) {
+    public void setGrades(double[] grades) {
         this.grades = grades;
     }
     public Double gradesAverage(){
