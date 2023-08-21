@@ -1,25 +1,24 @@
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
+
 public class Otros {
     public static void main(String[] args) {
+        LocalDate fecha = LocalDate.now();
+        LocalTime hora = LocalTime.now();
+        LocalDateTime fechaYHora = LocalDateTime.now();
+        LocalDateTime fechaYHora2 = LocalDateTime.of(2023, 02, 14, 01, 30);
 
-        //System.out.println(multiplos2(1000));
-        System.out.println(multiplos3o5(1000));
-    }
-    public static int multiplos2(int max){
-        int sum = 0;
-        for (int i = 0; i < max; i++) {
-            if((i % 2) == 0){
-                sum += i;
-            }
-        }
-        return sum;
-    }
-    public static int multiplos3o5(int max){
-        int sum = 0;
-        for (int i = 0; i < max; i++) {
-            if((i % 3) == 0 || (i % 5) == 0){
-                sum += i;
-            }
-        }
-        return sum;
+        fecha = fecha.plusDays(2);
+        fecha.plusWeeks(3);
+        fecha.plusMonths(1);
+        fecha.plusYears(5);
+
+        DateTimeFormatter formatFecha = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+        String fechaFormateada = fechaYHora.format(formatFecha);
+
+        fechaYHora.isAfter(fechaYHora2);
     }
 }
